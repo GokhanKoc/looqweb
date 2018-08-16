@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,600&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:300,500|Gothic+A1:300,500|Heebo:300,500');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:200,300,400,500');
+body {
+  // font-family: 'Muli', sans-serif;
+  font-family: 'Encode Sans', sans-serif;
+  // font-family: 'Heebo', sans-serif;
+	// font-family: 'Gothic A1', sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.jumbotron-slide{
+	padding:100px 0;
+	background-size: 55%;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-image: url(/img/qoins.svg);
+	background-color: #F2F1EF;
+	color: #607D8B;
+	.container{
+		display: flex;
+    align-items: center;
+    height: 100%;
+	}
+}
+.first-slide{
+	background-color: #673ab7;
+	color: white;
+}
+.second-slide{
+	background-color: #ffc107;
+	color: black;
+}
+.third-slide{
+	background-color: #00bcd4;
+	color: white;
+}
+.-s1{
+	background-image: url(/img/tokyo-purple.jpg);
+	// @extend .slidebg;
+}
+.-s2{
+	background-image: url(/img/tokyo-sun.jpg);
+	// @extend .slidebg;
+}
+.-s3{
+	background-image: url(/img/tokyo-aqua.jpg);
+	// @extend .slidebg;
+}
+h1, h2{
+	font-weight: 200 !important;
+}
+.bgImage{
+	position: relative;
+	float:left;
+
+	// top:0;
+	// left:0;
+	width:100%;
+	height: 35vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	// background-image: url(/img/tokyo-ginza.png);
+	// @extend .slidebg;
+	z-index: -5;
+	// opacity: 0.8;
+}
+.userImage{
+	// position: absolute;
+	// bottom:-75px;
+	// left:50%;
+	// margin-left:-75px;
+	margin-top:-105px;
+	width:150px;
+	box-shadow: 0 0 40px -5px black;
+	border-radius: 50%;
+	display: block;
+	border:5px solid white;
+}
+.-content{
+	// margin-top:15vh;
+}
+.-panel{
+	// background-color: rgba(255,255,255,0.9);
+	// padding:10px;
+	margin:10px 0;
+	// border-radius: 5px;
+	font-size: 18px;
+}
+.-steps{
+	.-stepNumber{
+		$step-size: 75px;
+		p{
+			width:$step-size;
+			height: $step-size;
+			line-height: $step-size;
+			text-align: center;
+			background-color: black;
+			color: white;
+			// border:2px solid black;
+			font-size: 42px;
+			margin:0;
+			border-radius: 50%;
+			// padding:10px;
+		}
+		
+	}
+	.-title{
+		font-size: 32px;
+	}
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  // margin-bottom: 4rem;
+  height: 100vh;
+  .carousel-inner{ height: 100%;}
+  .carousel-item {
+	  height: 100%;
+	  .container-fluid{
+	  	display: flex;
+	  	flex-direction: column;
+	  	height:100%;
+	  	// padding-top:30%;
+	  }
+	}
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+footer{
+	background-color: black;
+	color: #ccc;
+	padding:20px;
+	p{
+		margin:0;
+	}
+	a{ color: #ccc; }
+}

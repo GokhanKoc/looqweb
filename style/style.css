@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:300,600&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans:300,500|Gothic+A1:300,500|Heebo:300,500");
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans:200,300,400,500");
+body {
+  font-family: 'Encode Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.2; }
+
+.jumbotron-slide {
+  padding: 100px 0;
+  background-size: 55%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-image: url(/img/qoins.svg);
+  background-color: #F2F1EF;
+  color: #607D8B; }
+  .jumbotron-slide .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%; }
+
+.first-slide {
+  background-color: #673ab7;
+  color: white; }
+
+.second-slide {
+  background-color: #ffc107;
+  color: black; }
+
+.third-slide {
+  background-color: #00bcd4;
+  color: white; }
+
+.-s1 {
+  background-image: url(/img/tokyo-purple.jpg); }
+
+.-s2 {
+  background-image: url(/img/tokyo-sun.jpg); }
+
+.-s3 {
+  background-image: url(/img/tokyo-aqua.jpg); }
+
+h1, h2 {
+  font-weight: 200 !important; }
+
+.bgImage {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 35vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  z-index: -5; }
+
+.userImage {
+  margin-top: -105px;
+  width: 150px;
+  -webkit-box-shadow: 0 0 40px -5px black;
+  box-shadow: 0 0 40px -5px black;
+  border-radius: 50%;
+  display: block;
+  border: 5px solid white; }
+
+.-panel {
+  margin: 10px 0;
+  font-size: 18px; }
+
+.-steps .-stepNumber p {
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 42px;
+  margin: 0;
+  border-radius: 50%; }
+
+.-steps .-title {
+  font-size: 32px; }
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+.carousel {
+  height: 100vh; }
+  .carousel .carousel-inner {
+    height: 100%; }
+  .carousel .carousel-item {
+    height: 100%; }
+    .carousel .carousel-item .container-fluid {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      height: 100%; }
+
+/* Featurettes
+------------------------- */
+.featurette-divider {
+  margin: 5rem 0;
+  /* Space out the Bootstrap <hr> more */ }
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem; }
+
+footer {
+  background-color: black;
+  color: #ccc;
+  padding: 20px; }
+  footer p {
+    margin: 0; }
+  footer a {
+    color: #ccc; }

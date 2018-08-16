@@ -11,7 +11,7 @@ body {
   background-size: 55%;
   background-repeat: no-repeat;
   background-position: right center;
-  background-image: url(/img/qoins.svg);
+  background-image: url(./img/qoins.svg);
   background-color: #F2F1EF;
   color: #607D8B; }
   .jumbotron-slide .container {
@@ -36,13 +36,13 @@ body {
   color: white; }
 
 .-s1 {
-  background-image: url(/img/tokyo-purple.jpg); }
+  background-image: url(./img/tokyo-purple.jpg); }
 
 .-s2 {
-  background-image: url(/img/tokyo-sun.jpg); }
+  background-image: url(./img/tokyo-sun.jpg); }
 
 .-s3 {
-  background-image: url(/img/tokyo-aqua.jpg); }
+  background-image: url(./img/tokyo-aqua.jpg); }
 
 h1, h2 {
   font-weight: 200 !important; }

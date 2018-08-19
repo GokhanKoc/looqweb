@@ -9,7 +9,9 @@ body {
   font-weight: 300;
   line-height: 1.2;
 }
-.jumbotron-slide{
+.jumbotron{
+	position: relative;
+	height: 96vh;
 	padding:100px 0;
 	background-size: 55%;
 	background-repeat: no-repeat;
@@ -17,6 +19,7 @@ body {
 	background-image: url(../img/qoins.svg);
 	background-color: #F2F1EF;
 	color: #607D8B;
+	margin-bottom:0;
 	.container{
 		display: flex;
     align-items: center;
@@ -47,6 +50,21 @@ body {
 	background-image: url(../img/tokyo-aqua.jpg);
 	// @extend .slidebg;
 }
+.-purple{
+	position: relative;
+	background-color: #673ab7;
+	color: white;
+}
+.-ask{
+	position: relative;
+	background-color: #ffc107;
+	color: black;
+}
+.-business{
+	position: relative;
+	background-color: #ce0074;
+	color: white;
+}
 h1, h2{
 	font-weight: 200 !important;
 }
@@ -66,20 +84,32 @@ h1, h2{
 	z-index: -5;
 	// opacity: 0.8;
 }
-.userImage{
+.-user{
 	// position: absolute;
-	// bottom:-75px;
+	// top:100px;
+	// width: 280px;
 	// left:50%;
-	// margin-left:-75px;
-	margin-top:-105px;
-	width:150px;
-	box-shadow: 0 0 40px -5px black;
-	border-radius: 50%;
-	display: block;
-	border:5px solid white;
+	// margin-left: -140px;
+	z-index: 100;
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// margin:0 auto;
+	// text-align: center;
+	.userImage{
+
+		width:120px;
+		box-shadow: 0 0 40px -5px black;
+		border-radius: 50%;
+		display: block;
+		border:3px solid white;
+	}
 }
+
 .-content{
 	// margin-top:15vh;
+	padding: 10rem 0;
+	height: 96vh;
 }
 .-panel{
 	// background-color: rgba(255,255,255,0.9);
@@ -88,47 +118,128 @@ h1, h2{
 	// border-radius: 5px;
 	font-size: 18px;
 }
-.-steps{
-	.-stepNumber{
-		$step-size: 75px;
-		p{
-			width:$step-size;
-			height: $step-size;
-			line-height: $step-size;
-			text-align: center;
-			background-color: black;
-			color: white;
-			// border:2px solid black;
-			font-size: 42px;
-			margin:0;
-			border-radius: 50%;
-			// padding:10px;
-		}
+
+// .-steps{
+// 	.-stepNumber{
+// 		$step-size: 75px;
+// 		p{
+// 			width:$step-size;
+// 			height: $step-size;
+// 			line-height: $step-size;
+// 			text-align: center;
+// 			background-color: black;
+// 			color: white;
+// 			// border:2px solid black;
+// 			font-size: 42px;
+// 			margin:0;
+// 			border-radius: 50%;
+// 			// padding:10px;
+// 		}
 		
-	}
-	.-title{
-		font-size: 32px;
-	}
-}
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
+// 	}
+// 	.-title{
+// 		font-size: 32px;
+// 	}
+// }
 
 /* Carousel base class */
 .carousel {
   // margin-bottom: 4rem;
-  height: 100vh;
-  .carousel-inner{ height: 100%;}
-  .carousel-item {
-	  height: 100%;
-	  .container-fluid{
-	  	display: flex;
-	  	flex-direction: column;
-	  	height:100%;
-	  	// padding-top:30%;
-	  }
+  // width:100%;
+  // min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+  .carousel-inner{
+  	// height: 100%;
+  	display: flex;
+  }
+  .carousel-item{
+  }
+  .nextStep{
+  	position: absolute;
+  	top:50%;
+  	margin-top:-37.5px;
+  	left:-30px;
+  	width:75px;
+  	height:75px;
+  	transform: rotate(45deg);
+  	background-color: black;
+  	border-radius: 50% 0 50% 50%;
+  	.number{
+  		transform: rotate(-45deg);
+  		line-height: 75px;
+  		text-align: center;
+  		color: white;
+			font-size: 42px;
+  		z-index: 10;
+  	}
+  }
+  .-image{
+  	// display: flex;
+  	// flex-direction: column;
+  	// padding:15px;
+  	padding: 50px 0;
+  	display: flex;
+		justify-content: center;
+  	.frame{
+  		position: relative;
+  		// float:left;
+  		overflow: hidden;
+  		border-radius: 10px;
+  		box-shadow: 0 0 15px -5px black;
+  		border: 5px solid white;
+  		box-sizing: border-box;
+  		margin:0 auto
+  	}
+  }
+  .-text{
+  	display: flex;
+  	flex-direction: column;
+  	padding-right: 50px;
+  	.-title, .-description{
+  		display: flex;
+  		flex-direction: column;
+  		flex-basis: 50%;
+  	}
+  	.-title{
+  		justify-content: flex-end;
+  		align-items: flex-end;
+  		h2{
+  			text-align: right;
+  		}
+  	}
+  	.-stepNumber{
+  		position: absolute;
+  		top:50%;
+  		margin-top:-37.5px;
+  		right:-30px;
+			$step-size: 75px;
+			z-index: 100;
+			p{
+				width:$step-size;
+				height: $step-size;
+				line-height: $step-size;
+				text-align: center;
+				background-color: black;
+				color: white;
+				// border:2px solid black;
+				font-size: 42px;
+				margin:0;
+				border-radius: 50%;
+				// padding:10px;
+			}
+		}
+  }
+}
+.carousel-indicators{
+	bottom: -60px;
+	li{
+		height:30px;
+		border-radius: 50%;
 	}
 }
-
 
 /* Featurettes
 ------------------------- */

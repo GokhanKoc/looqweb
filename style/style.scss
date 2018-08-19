@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:300,600&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans:300,500|Gothic+A1:300,500|Heebo:300,500');
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans:200,300,400,500');
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
   // font-family: 'Muli', sans-serif;
   font-family: 'Encode Sans', sans-serif;
@@ -8,11 +14,55 @@ body {
 	// font-family: 'Gothic A1', sans-serif;
   font-weight: 300;
   line-height: 1.2;
+  // height: 100%;
+}
+
+.flexbox-parent{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: flex-start; /* align items in Main Axis */
+    align-items: stretch; /* align items in Cross Axis */
+    align-content: stretch; /* Extra space in Cross Axis */
+            
+    background: rgba(255, 255, 255, .1);
+}
+.tab-content
+{
+    flex: 1; /* same as flex: 1 1 auto; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* align items in Main Axis */
+    align-items: stretch; /* align items in Cross Axis */
+    align-content: stretch; /* Extra space in Cross Axis */
+}
+.tab-pane{
+	flex: 1; /* same as flex: 1 1 auto; */
+	background: rgba(0, 0, 0, .3);    
+   /* Needed for when the area gets squished too far and there is content that can't be displayed */
+   overflow: auto; 
+}
+.container-fluid{
+	flex: 1;
+	height: 100%;
+}
+
+.navbar{
+	padding:0;
+	.nav-link{
+		padding:10px; 
+		line-height: 50px;
+		color: black;
+	}
 }
 .jumbotron{
 	position: relative;
-	height: 96vh;
-	padding:100px 0;
+	// height: 96vh;
+	height:100%;
+	// padding:100px 0;
 	background-size: 55%;
 	background-repeat: no-repeat;
 	background-position: right center;
@@ -26,31 +76,24 @@ body {
     height: 100%;
 	}
 }
-.first-slide{
-	background-color: #673ab7;
-	color: white;
+.tab-content{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
-.second-slide{
-	background-color: #ffc107;
-	color: black;
-}
-.third-slide{
-	background-color: #00bcd4;
-	color: white;
-}
-.-s1{
-	background-image: url(../img/tokyo-purple.jpg);
-	// @extend .slidebg;
-}
-.-s2{
-	background-image: url(../img/tokyo-sun.jpg);
-	// @extend .slidebg;
-}
-.-s3{
-	background-image: url(../img/tokyo-aqua.jpg);
-	// @extend .slidebg;
-}
-.-purple{
+// .-s1{
+// 	background-image: url(../img/tokyo-purple.jpg);
+// 	// @extend .slidebg;
+// }
+// .-s2{
+// 	background-image: url(../img/tokyo-sun.jpg);
+// 	// @extend .slidebg;
+// }
+// .-s3{
+// 	background-image: url(../img/tokyo-aqua.jpg);
+// 	// @extend .slidebg;
+// }
+.-register{
 	position: relative;
 	background-color: #673ab7;
 	color: white;
@@ -65,7 +108,7 @@ body {
 	background-color: #ce0074;
 	color: white;
 }
-h1, h2{
+h1, h2, h3{
 	font-weight: 200 !important;
 }
 .bgImage{
@@ -107,10 +150,15 @@ h1, h2{
 }
 
 .-content{
+	display: flex;
 	// margin-top:15vh;
-	padding: 10rem 0;
-	min-height: 96vh;
-	height: 1080px;
+	// padding: 10rem 0;
+	// min-height: 96vh;
+	// height: 1080px;
+	.container{
+		display: flex;
+		justify-content: center;
+	}
 }
 .-panel{
 	// background-color: rgba(255,255,255,0.9);
@@ -206,10 +254,7 @@ h1, h2{
   	}
   	.-title{
   		justify-content: flex-end;
-  		align-items: flex-end;
-  		h2{
-  			text-align: right;
-  		}
+  		// align-items: flex-end;
   	}
   	.-stepNumber{
   		position: absolute;
@@ -235,9 +280,10 @@ h1, h2{
   }
 }
 .carousel-indicators{
-	bottom: -60px;
+	// bottom: -10px;
 	li{
-		height:30px;
+		height:15px;
+		width: 15px;
 		border-radius: 50%;
 	}
 }

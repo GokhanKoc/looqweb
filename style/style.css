@@ -87,7 +87,8 @@ h1, h2 {
 
 .-content {
   padding: 10rem 0;
-  height: 96vh; }
+  min-height: 96vh;
+  height: 1080px; }
 
 .-panel {
   margin: 10px 0;

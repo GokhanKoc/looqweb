@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:300,600&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans:300,500|Gothic+A1:300,500|Heebo:300,500');
+// @import url('https://fonts.googleapis.com/css?family=Muli:300,600&subset=latin-ext');
+// @import url('https://fonts.googleapis.com/css?family=Encode+Sans:300,500|Gothic+A1:300,500|Heebo:300,500');
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans:200,300,400,500');
 html, body{
   width: 100%;
@@ -16,7 +16,42 @@ body {
   line-height: 1.2;
   // height: 100%;
 }
-
+.-ball{
+	position: absolute;
+	z-index: 10;
+	box-shadow: 0 0 50px -5px rgba(0,0,0,0.5);
+	border-radius: 50%;
+	
+	&.answer-1{
+		top: 80%;
+		left:-10px;
+		margin-top:-75px;
+	}
+	&.answer-2{
+		top: -75px;
+		left:10%;
+		// margin-left:-50px;
+	}
+	&.answer-3{
+		bottom: 20px;
+		left:50%;
+		margin-left:-75px;
+	}
+	&.ask-1{
+		top: 10%;
+		right:5px;
+	}
+	&.ask-2{
+		top: 10%;
+		right:20%;
+		// margin-left:-50px;
+	}
+	&.ask-3{
+		bottom: 20%;
+		left:50%;
+		margin-left:-75px;
+	}
+}
 .flexbox-parent{
     width: 100%;
     height: 100%;
@@ -30,8 +65,7 @@ body {
             
     background: rgba(255, 255, 255, .1);
 }
-.tab-content
-{
+.tab-content{
     flex: 1; /* same as flex: 1 1 auto; */
     display: flex;
     flex-direction: row;
@@ -47,7 +81,7 @@ body {
 }
 .container-fluid{
 	flex: 1;
-	height: 100%;
+	// height: 100%;
 }
 
 .navbar{
@@ -61,19 +95,28 @@ body {
 .jumbotron{
 	position: relative;
 	// height: 96vh;
-	height:100%;
+	height:80%;
 	// padding:100px 0;
-	background-size: 55%;
+	// background-size: 55%;
 	background-repeat: no-repeat;
-	background-position: right center;
-	background-image: url(../img/qoins.svg);
+	background-position: center;
+	background-image: url(../img/unsplash/jeremy-bishop-262139-unsplash.jpg);
 	background-color: #F2F1EF;
-	color: #607D8B;
+	// color: #607D8B;
+	color: white;
+	background-size: cover;
 	margin-bottom:0;
+	border-radius: 0;
+	h1{
+		line-height: 90px;
+	}
 	.container{
 		display: flex;
     align-items: center;
     height: 100%;
+	}
+	.-cta{
+		margin-top:30px;
 	}
 }
 .tab-content{
@@ -93,20 +136,23 @@ body {
 // 	background-image: url(../img/tokyo-aqua.jpg);
 // 	// @extend .slidebg;
 // }
-.-register{
+.-register, .-ask, .-business{
 	position: relative;
-	background-color: #673ab7;
-	color: white;
+	// color: white;
+	color: black;
+	padding:200px 0;
+}
+.-register{
+	// background-color: #673ab7;
+	background-color: #dae0e5;
 }
 .-ask{
-	position: relative;
-	background-color: #ffc107;
-	color: black;
+	background-color: #ced4da;
+	// color: black;
 }
 .-business{
-	position: relative;
-	background-color: #ce0074;
-	color: white;
+	// background-color: #ce0074;
+	background: url(../img/3rd.png) bottom right no-repeat;
 }
 h1, h2, h3{
 	font-weight: 200 !important;
@@ -127,6 +173,9 @@ h1, h2, h3{
 	z-index: -5;
 	// opacity: 0.8;
 }
+.-section{
+	border-bottom:1px solid #ccc;
+}
 .-user{
 	// position: absolute;
 	// top:100px;
@@ -140,7 +189,6 @@ h1, h2, h3{
 	// margin:0 auto;
 	// text-align: center;
 	.userImage{
-
 		width:120px;
 		box-shadow: 0 0 40px -5px black;
 		border-radius: 50%;
@@ -149,17 +197,17 @@ h1, h2, h3{
 	}
 }
 
-.-content{
-	display: flex;
-	// margin-top:15vh;
-	// padding: 10rem 0;
-	// min-height: 96vh;
-	// height: 1080px;
-	.container{
-		display: flex;
-		justify-content: center;
-	}
-}
+// .-content{
+// 	display: flex;
+// 	// margin-top:15vh;
+// 	// padding: 10rem 0;
+// 	// min-height: 96vh;
+// 	// height: 1080px;
+// 	.container{
+// 		display: flex;
+// 		justify-content: center;
+// 	}
+// }
 .-panel{
 	// background-color: rgba(255,255,255,0.9);
 	// padding:10px;
@@ -203,6 +251,7 @@ h1, h2, h3{
   .carousel-inner{
   	// height: 100%;
   	display: flex;
+  	overflow: visible;
   }
   .carousel-item{
   }
@@ -229,32 +278,47 @@ h1, h2, h3{
   	// display: flex;
   	// flex-direction: column;
   	// padding:15px;
-  	padding: 50px 0;
+  	// padding: 50px 0;
   	display: flex;
 		justify-content: center;
+
   	.frame{
   		position: relative;
-  		// float:left;
-  		overflow: hidden;
-  		border-radius: 10px;
-  		box-shadow: 0 0 15px -5px black;
-  		border: 5px solid white;
-  		box-sizing: border-box;
-  		margin:0 auto
+  		width: 100%;
+  		min-height:640px;
+  		background-size: contain;
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		&.-register1{ background-image: url(../img/register-1.gif); }
+  		&.-register2{ background-image: url(../img/register-2.gif); }
+  		&.-register3{ background-image: url(../img/register-3.gif); }
+  		&.-ask1{ background-image: url(../img/ask-1.gif); }
+  		&.-ask2{ background-image: url(../img/ask-2.gif); }
+  		&.-ask3{ background-image: url(../img/ask-3.gif); }
   	}
+  	// [class*="-register"]{ background-position: center left; }
+  	// [class*="-ask"]{ background-position: center right; }
   }
   .-text{
-  	display: flex;
-  	flex-direction: column;
-  	padding-right: 50px;
-  	.-title, .-description{
-  		display: flex;
-  		flex-direction: column;
-  		flex-basis: 50%;
+  	.-statement{
+			line-height: 50px;
+			padding-top:50px;
   	}
-  	.-title{
-  		justify-content: flex-end;
-  		// align-items: flex-end;
+  	// display: flex;
+  	// flex-direction: column;
+  	.-title, .-description{
+  		// display: flex;
+  		// flex-direction: column;
+  		// flex-basis: 50%;
+  	}
+  	.-description{
+  		padding-top:20px;
+  		font-size: 20px;
+  	}
+  	h2{
+  		padding-top: 20px;
+  		// padding-bottom: 20px;
+  		// justify-content: flex-end;
   	}
   	.-stepNumber{
   		position: absolute;

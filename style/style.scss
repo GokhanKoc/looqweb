@@ -1,6 +1,8 @@
 // @import url('https://fonts.googleapis.com/css?family=Muli:300,600&subset=latin-ext');
 // @import url('https://fonts.googleapis.com/css?family=Encode+Sans:300,500|Gothic+A1:300,500|Heebo:300,500');
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans:200,300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+$step-size: 50px;
 html, body{
   width: 100%;
   height: 100%;
@@ -140,14 +142,22 @@ body {
 	position: relative;
 	// color: white;
 	color: black;
-	padding:200px 0;
+	padding:100px 0;
+	.nextCTA{
+		// position: relative;
+		// float:left;
+		font-size: 20px;
+		// border: 1px solid black;
+		// color: black;
+		// padding:10px;
+		margin-top:20px;
+	}
 }
 .-register{
-	// background-color: #673ab7;
-	background-color: #dae0e5;
+	// background-color: #dae0e5;
 }
 .-ask{
-	background-color: #ced4da;
+	// background-color: #ced4da;
 	// color: black;
 }
 .-business{
@@ -321,34 +331,65 @@ h1, h2, h3{
   		// justify-content: flex-end;
   	}
   	.-stepNumber{
-  		position: absolute;
-  		top:50%;
-  		margin-top:-37.5px;
-  		right:-30px;
-			$step-size: 75px;
+  		// position: absolute;
+  		// top:50%;
+  		// margin-top:-37.5px;
+  		// right:-30px;
+			
 			z-index: 100;
+			
+			font-weight: 600;
+			border-radius: 50%;
 			p{
 				width:$step-size;
 				height: $step-size;
 				line-height: $step-size;
 				text-align: center;
-				background-color: black;
-				color: white;
-				// border:2px solid black;
+				// background-color: black;
+				color: black;
+				border:4px solid black;
 				font-size: 42px;
 				margin:0;
 				border-radius: 50%;
+				// box-sizing: border-box;
 				// padding:10px;
 			}
 		}
   }
 }
+
 .carousel-indicators{
 	// bottom: -10px;
+	justify-content: flex-start;
+	position: relative;
+	float:left;
+	width: 100%;
+	bottom: 0;
+	margin:20px 0;
+	justify-content: none;
 	li{
-		height:15px;
-		width: 15px;
+		// height:15px;
+		// width: 15px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
+		font-size: 30px;
+		width:$step-size;
+		height: $step-size;
+		line-height: $step-size;
+		text-align: center;
+		text-indent: 0;
 		border-radius: 50%;
+		color: black;
+		// color: #94a3b3;
+		// background-color: rgba(0,0,0,0.1);
+		// border-style: solid;
+		// border-color: black;
+		// border-width: 0px;
+		&.active{
+			// border-width: 1px;
+			color: white;
+			background-color: black;
+		}
 	}
 }
 

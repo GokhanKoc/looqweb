@@ -319,7 +319,7 @@ h1, h2, h3 {
       margin: 0;
       border-radius: 50%; }
 
-.carousel-indicators {
+.-register .carousel-indicators, .-ask .carousel-indicators {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
@@ -331,7 +331,7 @@ h1, h2, h3 {
   -webkit-box-pack: none;
   -ms-flex-pack: none;
   justify-content: none; }
-  .carousel-indicators li {
+  .-register .carousel-indicators li, .-ask .carousel-indicators li {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 30px;
@@ -342,7 +342,7 @@ h1, h2, h3 {
     text-indent: 0;
     border-radius: 50%;
     color: black; }
-    .carousel-indicators li.active {
+    .-register .carousel-indicators li.active, .-ask .carousel-indicators li.active {
       color: white;
       background-color: black; }
 
@@ -357,6 +357,10 @@ h1, h2, h3 {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -.05rem; }
+
+.card {
+  border: 0;
+  margin-bottom: 50px; }
 
 footer {
   background-color: black;

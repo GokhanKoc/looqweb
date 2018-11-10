@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
     margin-top: 20px; }
 
-.-register, .-ask {
+.-register, .-ask, .-business {
   background-attachment: fixed;
   background-size: cover;
   background-position: right bottom;
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ced4da; }
 
 .-business {
-  background: url(../img/3rd.png) bottom right no-repeat; }
+  background-image: url(../img/tokyo-bg-business.jpg); }
 
 .-about {
   position: relative;

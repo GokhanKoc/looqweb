@@ -383,10 +383,12 @@ footer {
     position: relative;
     float: left;
     margin: 0 2.5px 10px 2.5px; }
+  footer a {
+    color: #555; }
   footer i {
     font-size: 30px;
     margin: 0 20px 50px 0; }
   footer button {
-    border-color: #48f8d8v;
+    border-color: #48f8d8;
     background-color: #48f8d8;
     color: black; }

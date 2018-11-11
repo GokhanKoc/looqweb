@@ -48,7 +48,8 @@ h1, h2, h3, h4, h5, h6 {
     .jumbotron #myCarousel-jumbotron .carousel-indicators li {
       width: 30px;
       height: 30px;
-      border-radius: 50%; }
+      border-radius: 50%;
+      background-color: white; }
       .jumbotron #myCarousel-jumbotron .carousel-indicators li.active {
         background-color: #e91e63; }
     .jumbotron #myCarousel-jumbotron .carousel-inner {
@@ -86,6 +87,10 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
         line-height: 70px;
         font-size: 70px; }
+        @media (max-width: 767.98px) {
+          .jumbotron #myCarousel-jumbotron .carousel-inner h1 {
+            line-height: 45px;
+            font-size: 45px; } }
   .jumbotron .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -108,12 +113,27 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute; }
   .tldr b {
     font-weight: 600; }
-  .tldr.-location:after, .tldr.-qoins:after, .tldr.-b2c:after {
+  .tldr.-location:after, .tldr.-qoins:after, .tldr.-b2c:after, .tldr.-api:after {
     content: "";
     position: absolute;
     width: 0;
     height: 0;
     border-style: solid; }
+  .tldr.-api {
+    width: 75px;
+    height: 75px;
+    float: right;
+    background-color: #e91e63;
+    margin-bottom: 30px;
+    line-height: 75px; }
+    .tldr.-api i {
+      font-size: 40px;
+      color: white; }
+    .tldr.-api:after {
+      left: 20px;
+      bottom: -20px;
+      border-width: 20px 20px 0 0;
+      border-color: #e91e63 transparent transparent transparent; }
   .tldr.-location {
     float: right;
     background-color: #00ffbc;
@@ -132,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 20px; }
     .tldr.-qoins .-miru {
       bottom: -50px;
-      left: 10px; }
+      left: -10px; }
     .tldr.-qoins:after {
       left: 20px;
       top: -20px;
@@ -197,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
     align-self: center; }
   .-register .nextCTA, .-ask .nextCTA, .-business .nextCTA, .-specs .nextCTA {
     font-size: 20px;
-    margin-top: 20px; }
+    margin: 20px 0; }
 
 .-register, .-ask, .-business, .-about {
   background-attachment: fixed;
@@ -215,13 +235,18 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ced4da; }
 
 .-business {
-  background-image: url(../img/tokyo-bg-business.jpg); }
+  background-image: url(../img/tokyo-bg-business.jpg);
+  padding: 100px 0; }
   .-business h2, .-business .-description {
     position: relative;
     float: left;
     width: 100%; }
   .-business h2 {
     font-size: 40px; }
+    @media (max-width: 767.98px) {
+      .-business h2 {
+        font-size: 30px;
+        line-height: 30px; } }
   .-business .b2cform {
     position: relative;
     width: 100%;
@@ -229,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
     .-business .b2cform input, .-business .b2cform button {
       position: relative;
       float: left;
-      margin: 0 2.5px; }
+      margin: 0 2.5px 10px 2.5px; }
     .-business .b2cform button {
       border-color: #bade01;
       background-color: #bade01;
@@ -243,15 +268,18 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 70vh;
   z-index: 5;
   background-color: #ced4da; }
-  .-about h2, .-about h3, .-about h4 {
+  .-about h2, .-about h3, .-about h4, .-about h5 {
     position: relative;
     float: left;
     width: 100%; }
   .-about .qmark {
     position: absolute;
-    bottom: -30px;
-    right: 20%;
+    bottom: -70px;
+    left: 10%;
     width: 200px; }
+    @media (max-width: 767.98px) {
+      .-about .qmark {
+        display: none; } }
 
 .carousel {
   display: -webkit-box;
@@ -276,37 +304,34 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
+    @media (max-width: 767.98px) {
+      .carousel .-image {
+        margin-top: 50px;
+        margin-bottom: 50px; } }
     .carousel .-image .screenshot {
       border-radius: 10px;
       -webkit-box-shadow: 0 5px 50px -20px black;
       box-shadow: 0 5px 50px -20px black; }
-    .carousel .-image .frame {
-      position: relative;
-      width: 100%;
-      min-height: 640px;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat; }
-      .carousel .-image .frame.-register1 {
-        background-image: url(../img/register-1.gif); }
-      .carousel .-image .frame.-register2 {
-        background-image: url(../img/register-2.gif); }
-      .carousel .-image .frame.-register3 {
-        background-image: url(../img/register-3.gif); }
-      .carousel .-image .frame.-ask1 {
-        background-image: url(../img/ask-1.gif); }
-      .carousel .-image .frame.-ask2 {
-        background-image: url(../img/ask-2.gif); }
-      .carousel .-image .frame.-ask3 {
-        background-image: url(../img/ask-3.gif); }
   .carousel .-text .-statement {
     line-height: 50px;
     padding-top: 50px; }
+    @media (max-width: 767.98px) {
+      .carousel .-text .-statement {
+        font-size: 30px;
+        line-height: 30px; } }
   .carousel .-text .-description {
     padding-top: 20px;
     font-size: 20px; }
   .carousel .-text h2 {
     padding-top: 20px; }
+    @media (max-width: 767.98px) {
+      .carousel .-text h2 {
+        font-size: 20px;
+        line-height: 20px; } }
+
+@media (max-width: 767.98px) {
+  .-ask .-statement {
+    padding-top: 0 !important; } }
 
 .-register .carousel-indicators, .-ask .carousel-indicators {
   -webkit-box-pack: start;
@@ -343,8 +368,12 @@ footer {
   background-color: white;
   background: url(../img/3rd.png) bottom right no-repeat;
   color: #555;
+  background-color: #e9ecef;
   padding: 50px 0;
   min-height: 300px; }
+  @media (max-width: 767.98px) {
+    footer {
+      background-size: 70%; } }
   footer .form-group {
     position: relative;
     float: left;
@@ -353,7 +382,7 @@ footer {
   footer input, footer button {
     position: relative;
     float: left;
-    margin: 0 2.5px; }
+    margin: 0 2.5px 10px 2.5px; }
   footer i {
     font-size: 30px;
     margin: 0 20px 50px 0; }

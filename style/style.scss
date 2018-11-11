@@ -2,6 +2,23 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
 $step-size: 50px;
 $jumbotron-step-size: 30px;
+
+@import "../node_modules/bootstrap/scss/_functions.scss";
+@import "../node_modules/bootstrap/scss/_variables.scss";
+@import "../node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+
+
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
 html, body{
   width: 100%;
   height: 100%;
@@ -52,6 +69,7 @@ h1, h2, h3, h4, h5, h6{
 				width: $jumbotron-step-size;
 				height: $jumbotron-step-size;
 				border-radius: 50%;
+				background-color: white;
 				&.active{
 					background-color: #e91e63;
 				}
@@ -93,6 +111,10 @@ h1, h2, h3, h4, h5, h6{
 				}
 			}
 			h1{
+				@include media-breakpoint-down(sm) {
+					line-height: 45px;
+					font-size: 45px;
+				}
 				position: relative;
 				line-height: 70px;
 				font-size: 70px;
@@ -122,13 +144,31 @@ h1, h2, h3, h4, h5, h6{
 	b{
 		font-weight: 600;
 	}
-	&.-location, &.-qoins, &.-b2c{
+	&.-location, &.-qoins, &.-b2c, &.-api{
 		&:after{
 			content: "";
 			position: absolute;
 			width: 0;
 			height: 0;
 			border-style: solid;
+		}
+	}
+	&.-api{
+		width: 75px;
+		height:75px;
+		float:right;
+		background-color: #e91e63;
+		margin-bottom: 30px;
+		line-height: 75px;
+		i{
+			font-size: 40px;
+			color:white;
+		}
+		&:after{
+			left: 20px;
+			bottom: -20px;
+			border-width: 20px 20px 0 0;
+			border-color: #e91e63 transparent transparent transparent;
 		}
 	}
 	&.-location{
@@ -152,7 +192,7 @@ h1, h2, h3, h4, h5, h6{
 		margin-top: 20px;
 		.-miru{
 			bottom:-50px;
-			left:10px;
+			left:-10px;
 		}
 		&:after{
 			left: 20px;
@@ -226,7 +266,7 @@ h1, h2, h3, h4, h5, h6{
 	}
 	.nextCTA{
 		font-size: 20px;
-		margin-top:20px;
+		margin:20px 0;
 	}
 }
 .-register, .-ask, .-business, .-about{
@@ -248,12 +288,17 @@ h1, h2, h3, h4, h5, h6{
 	// background-color: #ce0074;
 	background-image: url(../img/tokyo-bg-business.jpg);
 	// background: url(../img/3rd.png) bottom right no-repeat;
+	padding:100px 0; 
 	h2, .-description{
 		position: relative;
 		float:left; 
 		width:100%;
 	}
 	h2{
+		@include media-breakpoint-down(sm) {
+			font-size: 30px;
+    	line-height: 30px;
+		}
 		font-size: 40px; 
 	}
 	.b2cform{
@@ -263,7 +308,7 @@ h1, h2, h3, h4, h5, h6{
 		input, button{
 			position: relative;
 			float:left;
-			margin: 0 2.5px ;
+			margin: 0 2.5px 10px 2.5px;
 		}
 		button{ border-color: #bade01; background-color: #bade01; color: black; }
 	}
@@ -277,18 +322,27 @@ h1, h2, h3, h4, h5, h6{
 	min-height: 70vh;
 	z-index: 5;
 	background-color: #ced4da;
-	h2, h3, h4{
+	h2, h3, h4, h5{
 		position: relative;
 		float:left;
 		width:100%;
 	}
 	.qmark{
 		position: absolute;
-		bottom:-30px;
-		right:20%;
+		bottom:-70px;
+		left:10%;
 		width:200px;
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
 		// box-shadow: 0 0 200px black;
 		// border-radius: 100%;
+	}
+	.-qoinArea{
+		// background-color: rgba(255,202,1,0.1);
+		// // border:1px solid #ffca01;
+		// padding:5px;
+		// border-radius: 10px;
 	}
 }
 .carousel {
@@ -302,29 +356,47 @@ h1, h2, h3, h4, h5, h6{
   .-image{
   	display: flex;
 		justify-content: center;
+		@include media-breakpoint-down(sm) {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
 		.screenshot{
 			border-radius: 10px;
 			box-shadow: 0 5px 50px -20px black;
+			@include media-breakpoint-down(sm) {
+				// margin-top: 50px;
+				// margin-bottom: 50px;
+			}
 		}
-  	.frame{
-  		position: relative;
-  		width: 100%;
-  		min-height:640px;
-  		background-size: contain;
-  		background-position: center;
-  		background-repeat: no-repeat;
-  		&.-register1{ background-image: url(../img/register-1.gif); }
-  		&.-register2{ background-image: url(../img/register-2.gif); }
-  		&.-register3{ background-image: url(../img/register-3.gif); }
-  		&.-ask1{ background-image: url(../img/ask-1.gif); }
-  		&.-ask2{ background-image: url(../img/ask-2.gif); }
-  		&.-ask3{ background-image: url(../img/ask-3.gif); }
-  	}
+  	// .frame{
+  	// 	@include media-breakpoint-down(sm) {
+
+			// }
+  	// 	position: relative;
+  	// 	width: 100%;
+  	// 	min-height:640px;
+  	// 	background-size: contain;
+  	// 	background-position: center;
+  	// 	background-repeat: no-repeat;
+  	// 	&.-register1{ background-image: url(../img/register-1.gif); }
+  	// 	&.-register2{ background-image: url(../img/register-2.gif); }
+  	// 	&.-register3{ background-image: url(../img/register-3.gif); }
+  	// 	&.-ask1{ background-image: url(../img/ask-1.gif); }
+  	// 	&.-ask2{ background-image: url(../img/ask-2.gif); }
+  	// 	&.-ask3{ background-image: url(../img/ask-3.gif); }
+  	// }
   	// [class*="-register"]{ background-position: center left; }
   	// [class*="-ask"]{ background-position: center right; }
   }
   .-text{
+		@include media-breakpoint-down(sm) {
+
+		}
   	.-statement{
+  		@include media-breakpoint-down(sm) {
+  			font-size: 30px;
+  			line-height: 30px;
+  		}
 			line-height: 50px;
 			padding-top:50px;
   	}
@@ -333,9 +405,20 @@ h1, h2, h3, h4, h5, h6{
   		font-size: 20px;
   	}
   	h2{
+  		@include media-breakpoint-down(sm) {
+  			font-size: 20px;
+  			line-height: 20px;
+  		}
   		padding-top: 20px;
   	}
   }
+}
+.-ask{
+	.-statement{
+		@include media-breakpoint-down(sm) {
+			padding-top:0 !important;
+		}
+	}
 }
 .-register, .-ask{
 	.carousel-indicators{
@@ -372,8 +455,12 @@ footer{
 	background-color: white;
 	background: url(../img/3rd.png) bottom right no-repeat;
 	color: #555;
+	background-color: #e9ecef;
 	padding:50px 0;
 	min-height: 300px;
+	@include media-breakpoint-down(sm) {
+		background-size: 70%;
+	}
 	.form-group{
 		position: relative;
 		float:left;
@@ -383,7 +470,7 @@ footer{
 	input, button{
 		position: relative;
 		float:left;
-		margin: 0 2.5px ;
+		margin: 0 2.5px 10px 2.5px;
 	}
 	i{
 		font-size: 30px;

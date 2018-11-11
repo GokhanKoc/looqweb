@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="./img/favicon/favicon.ico">
-
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <title>looq</title>
 
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 
   <body>
 
-	<nav class="navbar fixed-top navbar-expand-sm  navbar-light ">
+<!-- 	<nav class="navbar navbar-expand-sm  navbar-light ">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myTab" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  	</button>
@@ -33,9 +33,14 @@
 		    <a class="nav-item nav-link" id="nav-business-tab" data-toggle="tab" href="#nav-business" role="tab">I want to promote</a>
 		  </div>
 		</div>
-	</nav>
+	</nav> -->
 
 	<div class="jumbotron container-fluid">
+		<div class="container">
+			<!-- <div class="row"> -->
+				<img src="./img/looq.svg" class="-logo">
+			<!-- </div> -->
+		</div>
 		<div id="myCarousel-jumbotron" class="carousel slide carousel-fade" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#myCarousel-jumbotron" data-slide-to="0" class="active"></li>
@@ -99,6 +104,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col col-md-8">
+					<div class="tldr -location">A real time knowledge sharing platform where you can access live -not indexed- information.</div>
 					<h2>looq is a location based real time curiosity remover</h2>
 					
 
@@ -112,9 +118,9 @@
 
 					
 					<h4>
-						<p>Oh btw, did we mention that you are earning qoins as you use looq? Every hour we are giving away qoins for free! + get more qoins as you answer questions!
-						</p>
+						Oh btw, did we mention that you are earning qoins as you use looq? Every hour we are giving away qoins for free! + get more qoins as you answer questions!
 					</h4>
+					<div class="tldr -qoins">Giving away qoins every hour, simply a utility token in an open ended looq ecosystem.</div>
 				</div>
 			</div>
 		</div>
@@ -474,18 +480,29 @@
 
 			<div class="row">
 				<div class="col col-12 col-md-6 -text">
-					<div class="-title">
+					<div class="tldr -b2c">Looq makes it easy to connect with potential customers</div>
 
-						<h1>I am always here!<br>Want to promote my business</h1>
-					</div>
+							
+						<h2>I am always here!<br>Want to promote my business</h2>
+
 					<div class="-description">
 						<p>looq's sponsored answers program is for you!</p>
 						<p>Show your brand to all users in looq</p>
 	        	<p>Target individuals specifically asking questions in your area. Promote your business and establish direct B2C relationships.</p>
 					</div>
+					<div class="b2cform">
+						<form>
+						  <div class="form-group">
+						    <input type="email" class="col col-12 col-md-6 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email to get in touch...">
+
+								<button type="submit" class="col col-12 col-md-2 btn btn-primary">Submit</button>
+						  </div>
+
+						  
+						</form>
+					</div>
 				</div>
 
-				<div class="col col-12 col-md-4"></div>
 			</div>
 	  </div>
 	</div>
@@ -494,7 +511,38 @@
 
 
 	<footer>
-	  <p>&copy; 2018 looq &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h2>leave your mail for the latest info and news about looq...</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<form>
+					  <div class="form-group">
+					    <input type="email" class="col col-12 col-md-6 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email to get in touch...">
+
+							<button type="submit" class="col col-12 col-md-2 btn">Submit</button>
+					  </div>
+						
+					  
+					</form>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-twitter"></i>
+					<i class="fab fa-facebook"></i>
+					<i class="far fa-envelope-open"></i>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<p>&copy; 2018 looq <!-- &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> --></p><br>
+
+				</div>
+			</div>
+		</div>
+
+	  
 	</footer>
 
     <!-- Bootstrap core JavaScript

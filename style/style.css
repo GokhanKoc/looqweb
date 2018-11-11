@@ -34,12 +34,23 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin-bottom: 0;
   border-radius: 0; }
+  .jumbotron .-logo {
+    position: relative;
+    z-index: 5;
+    margin: 50px 0 0 0;
+    height: 80px; }
   .jumbotron #myCarousel-jumbotron {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; }
+    .jumbotron #myCarousel-jumbotron .carousel-indicators li {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%; }
+      .jumbotron #myCarousel-jumbotron .carousel-indicators li.active {
+        background-color: #e91e63; }
     .jumbotron #myCarousel-jumbotron .carousel-inner {
       position: absolute;
       top: 0;
@@ -85,6 +96,47 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%; }
   .jumbotron .-cta {
     margin-top: 30px; }
+
+.tldr {
+  position: relative;
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center; }
+  .tldr.-location:after, .tldr.-qoins:after, .tldr.-b2c:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid; }
+  .tldr.-location {
+    float: right;
+    background-color: #00ffbc;
+    margin-bottom: 20px; }
+    .tldr.-location:after {
+      left: 20px;
+      bottom: -20px;
+      border-width: 20px 20px 0 0;
+      border-color: #00ffbc transparent transparent transparent; }
+  .tldr.-qoins {
+    float: left;
+    background-color: #ffca01;
+    margin-top: 20px; }
+    .tldr.-qoins:after {
+      left: 20px;
+      top: -20px;
+      border-width: 20px 0 0 20px;
+      border-color: transparent transparent transparent #ffca01; }
+  .tldr.-b2c {
+    float: right;
+    background-color: #bade01;
+    margin-bottom: 20px; }
+    .tldr.-b2c:after {
+      left: 20px;
+      bottom: -20px;
+      border-width: 20px 20px 0 0;
+      border-color: #bade01 transparent transparent transparent; }
 
 .-ball {
   position: absolute;
@@ -134,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
     margin-top: 20px; }
 
-.-register, .-ask, .-business {
+.-register, .-ask, .-business, .-about {
   background-attachment: fixed;
   background-size: cover;
   background-position: right bottom;
@@ -151,14 +203,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .-business {
   background-image: url(../img/tokyo-bg-business.jpg); }
+  .-business h2, .-business .-description {
+    position: relative;
+    float: left;
+    width: 100%; }
+  .-business h2 {
+    font-size: 40px; }
+  .-business .b2cform {
+    position: relative;
+    width: 100%;
+    float: left; }
+    .-business .b2cform input, .-business .b2cform button {
+      position: relative;
+      float: left;
+      margin: 0 2.5px; }
+    .-business .b2cform button {
+      border-color: #bade01;
+      background-color: #bade01;
+      color: black; }
 
 .-about {
   position: relative;
   float: left;
   padding: 100px 0;
-  background-attachment: fixed;
+  background-image: url(../img/tokyo-bg-ghost.jpg);
   min-height: 70vh;
-  z-index: 5; }
+  z-index: 5;
+  background-color: #ced4da; }
+  .-about h2, .-about h3, .-about h4 {
+    position: relative;
+    float: left;
+    width: 100%; }
   .-about .qmark {
     position: absolute;
     bottom: -30px;
@@ -252,10 +327,24 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 50px; }
 
 footer {
-  background-color: black;
-  color: #ccc;
-  padding: 20px; }
-  footer p {
-    margin: 0; }
-  footer a {
-    color: #ccc; }
+  background-color: white;
+  background: url(../img/3rd.png) bottom right no-repeat;
+  color: #555;
+  padding: 50px 0;
+  min-height: 300px; }
+  footer .form-group {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 20px 0 100px 0; }
+  footer input, footer button {
+    position: relative;
+    float: left;
+    margin: 0 2.5px; }
+  footer i {
+    font-size: 30px;
+    margin: 0 20px 50px 0; }
+  footer button {
+    border-color: #48f8d8v;
+    background-color: #48f8d8;
+    color: black; }

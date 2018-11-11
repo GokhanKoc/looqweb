@@ -116,6 +116,12 @@ h1, h2, h3, h4, h5, h6{
 	border-radius: 10px;
 	font-size:18px;
 	text-align: center;
+	.-miru{
+		position: absolute;
+	}
+	b{
+		font-weight: 600;
+	}
 	&.-location, &.-qoins, &.-b2c{
 		&:after{
 			content: "";
@@ -129,6 +135,10 @@ h1, h2, h3, h4, h5, h6{
 		float:right;
 		background-color: #00ffbc;
 		margin-bottom: 20px;
+		.-miru{
+			top:-50px;
+			right:10px;
+		}
 		&:after{
 			left: 20px;
 			bottom: -20px;
@@ -140,6 +150,10 @@ h1, h2, h3, h4, h5, h6{
 		float:left;
 		background-color: #ffca01;
 		margin-top: 20px;
+		.-miru{
+			bottom:-50px;
+			left:10px;
+		}
 		&:after{
 			left: 20px;
 			top: -20px;
@@ -151,6 +165,10 @@ h1, h2, h3, h4, h5, h6{
 		float:right;
 		background-color: #bade01;
 		margin-bottom: 20px;
+		.-miru{
+			top:-50px;
+			left:10px;
+		}
 		&:after{
 			left: 20px;
 			bottom: -20px;

@@ -104,6 +104,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
   font-size: 18px;
   text-align: center; }
+  .tldr .-miru {
+    position: absolute; }
+  .tldr b {
+    font-weight: 600; }
   .tldr.-location:after, .tldr.-qoins:after, .tldr.-b2c:after {
     content: "";
     position: absolute;
@@ -114,6 +118,9 @@ h1, h2, h3, h4, h5, h6 {
     float: right;
     background-color: #00ffbc;
     margin-bottom: 20px; }
+    .tldr.-location .-miru {
+      top: -50px;
+      right: 10px; }
     .tldr.-location:after {
       left: 20px;
       bottom: -20px;
@@ -123,6 +130,9 @@ h1, h2, h3, h4, h5, h6 {
     float: left;
     background-color: #ffca01;
     margin-top: 20px; }
+    .tldr.-qoins .-miru {
+      bottom: -50px;
+      left: 10px; }
     .tldr.-qoins:after {
       left: 20px;
       top: -20px;
@@ -132,6 +142,9 @@ h1, h2, h3, h4, h5, h6 {
     float: right;
     background-color: #bade01;
     margin-bottom: 20px; }
+    .tldr.-b2c .-miru {
+      top: -50px;
+      left: 10px; }
     .tldr.-b2c:after {
       left: 20px;
       bottom: -20px;

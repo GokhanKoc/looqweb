@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="./img/favicon/favicon.ico">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <title>looq</title>
-
+		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
   <body>
@@ -55,7 +57,7 @@
   		    <div class="container">
 			    	<div class="col col-12 col-md-5">
 			    		<h1>Are you sure the airport is that way?</h1>
-			        <p><a class="btn btn-dark btn-lg -cta" id="cta" href="#nav-register" >ask looq!</a></p>  
+			        <p><a class="btn btn-dark btn-lg cta" href="#about" >ask looq!</a></p>  
 			      </div>
 			    </div>
       	</div>
@@ -63,7 +65,7 @@
       		<div class="container">
 			    	<div class="col col-12 col-md-5">
 			    		<h1>Not the classiest, but the best taste...</h1>
-			        <p><a class="btn btn-outline-light btn-lg -cta" id="cta" href="#nav-register" >ask looq!</a></p>  
+			        <p><a class="btn btn-outline-light btn-lg cta" href="#about" >ask looq!</a></p>  
 			      </div>
 			    </div>
       	</div>
@@ -71,7 +73,7 @@
       		<div class="container">
 			    	<div class="col col-12 col-md-5">
 			    		<h1>Hotel must be around this corner!</h1>
-			        <p><a class="btn btn-outline-dark btn-lg -cta" id="cta" href="#nav-register" >ask looq!</a></p>  
+			        <p><a class="btn btn-outline-dark btn-lg cta" href="#about" >ask looq!</a></p>  
 			      </div>
 			    </div>
       	</div>
@@ -79,7 +81,7 @@
       		<div class="container">
 			    	<div class="col col-12 col-md-5">
 			    		<h1>Time to avoid rush hour...</h1>
-			        <p><a class="btn btn-outline-dark btn-lg -cta" id="cta" href="#nav-register" >ask looq!</a></p>  
+			        <p><a class="btn btn-outline-dark btn-lg cta" href="#about" >ask looq!</a></p>  
 			      </div>
 			    </div>
       	</div>
@@ -87,7 +89,7 @@
       		<div class="container">
 			    	<div class="col col-12 col-md-5">
 			    		<h1>Best deals are not always stationary...</h1>
-			        <p><a class="btn btn-outline-light btn-lg -cta" id="cta" href="#nav-register" >ask looq!</a></p>  
+			        <p><a class="btn btn-outline-light btn-lg cta" href="#about" >ask looq!</a></p>  
 			      </div>
 			    </div>
       	</div>
@@ -99,11 +101,11 @@
 
   </div>
 
-	<div class="container-fluid -about">
-		<img src="./img/qmark.svg" class="qmark">
+	<div class="container-fluid -about" id="about">
+		<img src="./img/qmark.svg" class="qmark" data-aos="fade-down">
 		<div class="container">
 			<div class="row">
-				<div class="col col-md-6">
+				<div class="col col-12 col-md-8" data-aos="fade-right">
 					<div class="tldr -location"><b>TL;DR</b><br>A real time knowledge sharing platform where you can access live -not indexed- information.
 					<img src="./img/bored-1.png" class="-miru">
 					</div>
@@ -117,11 +119,11 @@
 					Just click looq and get the info you want
 					</h3>
 				</div>
-				<div class="col col-md-4">
-					<div class="tldr -api"><i class="fas fa-plug"></i></div>
+				<div class="col col-12 col-md-4 -about-right" data-aos="fade-up">
+					<!-- <div class="tldr -api"><i class="fas fa-plug"></i></div>
 					<h5>
 						looq API has several features to help other organizations with multiple categories and easily adaptable framework, using machine learning algorithms to match best respond and responders.
-					</h5>
+					</h5> -->
 
 					<h5>
 						looq is a messaging app powered by blockchain technology with the qoins at heart of the experience. Qoins, simply a utility token in an open-ended looq ecosystem.
@@ -398,7 +400,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col col-12 col-md-6 -text">
-					<div class="tldr -b2c"><b>TL;DR</b><br>Looq makes it easy to connect with potential customers
+					<div class="tldr -b2c" data-aos="fade-down"><b>TL;DR</b><br>Looq makes it easy to connect with potential customers
 						<img src="./img/bored-2.png" class="-miru">
 					</div>
 					<h2>I am always here!<br>Want to promote my business</h2>
@@ -410,8 +412,11 @@
 					<div class="b2cform">
 						<form action="https://formspree.io/looqapp@gmail.com" method="POST" />
 						  <div class="form-group">
-						  	<input type="text" name="name" class="col col-12 col-md-6 form-control" placeholder="Enter email to get in touch...">
-								<input type="submit" class="col col-12 col-md-2 btn btn-primary" value="Send" placeholder="Submit">
+						  	<input type="text" name="email" class="col col-12 col-md-6 form-control" placeholder="Your email" />
+						  	<input type="hidden" name="_next" value="thanks-b2c.html" />
+						  	<input type="hidden" name="_subject" value="B2C Mail Form" />
+						  	<input type="text" name="_gotcha" style="display:none" />
+								<input type="submit" class="col col-12 col-md-2 btn btn-primary" value="Send">
 						  </div>
 						</form>
 					</div>
@@ -429,10 +434,13 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6">
-					<form>
+					<form action="https://formspree.io/looqapp@gmail.com" method="POST" />
 					  <div class="form-group">
-					    <input type="email" class="col col-12 col-md-6 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email to join mail list">
-							<button type="submit" class="col col-12 col-md-2 btn">Submit</button>
+					  	<input type="text" name="email" class="col col-12 col-md-6 form-control" placeholder="Your email" />
+					  	<input type="hidden" name="_next" value="thanks-maillist.html" />
+					  	<input type="hidden" name="_subject" value="Joining mailing list" />
+					  	<input type="text" name="_gotcha" style="display:none" />
+							<input type="submit" class="col col-12 col-md-2 btn btn-primary" value="Join">
 					  </div>
 					</form>
 					<a href="https://www.instagram.com/looqapp/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -452,20 +460,22 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 		<script>
+			AOS.init();
 			$(document).ready(function() { 
-			  $('#cta').click(function (e) {
-			      e.preventDefault();
-			      $('a[href="' + $(this).attr('href') + '"]').tab('show');
-			  })
 			  $('#myCarousel-jumbotron').carousel({
 				  interval: 5000,
 				  pause: "false"
 				})
+
+		    $( "a.cta" ).click(function( event ) {
+	        event.preventDefault();
+	        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 1000);
+		    });
 			});
 		</script>
 

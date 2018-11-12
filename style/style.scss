@@ -126,13 +126,13 @@ h1, h2, h3, h4, h5, h6{
     align-items: center;
     height: 100%;
 	}
-	.-cta{
+	.cta{
 		margin-top:30px;
 	}
 }
 .tldr{
 	position: relative;
-	width:250px;
+	width:235px;
 	// height: 200px;
 	padding:10px;
 	border-radius: 10px;
@@ -191,7 +191,7 @@ h1, h2, h3, h4, h5, h6{
 		background-color: #ffca01;
 		margin-top: 20px;
 		.-miru{
-			bottom:-50px;
+			bottom:-60px;
 			left:-10px;
 		}
 		&:after{
@@ -322,6 +322,12 @@ h1, h2, h3, h4, h5, h6{
 	min-height: 70vh;
 	z-index: 5;
 	background-color: #ced4da;
+	.-about-right{
+		margin-top:150px;
+		@include media-breakpoint-down(sm) {
+			margin-top:0;
+		}
+	}
 	h2, h3, h4, h5{
 		position: relative;
 		float:left;

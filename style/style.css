@@ -99,12 +99,12 @@ h1, h2, h3, h4, h5, h6 {
     -ms-flex-align: center;
     align-items: center;
     height: 100%; }
-  .jumbotron .-cta {
+  .jumbotron .cta {
     margin-top: 30px; }
 
 .tldr {
   position: relative;
-  width: 250px;
+  width: 235px;
   padding: 10px;
   border-radius: 10px;
   font-size: 18px;
@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ffca01;
     margin-top: 20px; }
     .tldr.-qoins .-miru {
-      bottom: -50px;
+      bottom: -60px;
       left: -10px; }
     .tldr.-qoins:after {
       left: 20px;
@@ -268,6 +268,11 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 70vh;
   z-index: 5;
   background-color: #ced4da; }
+  .-about .-about-right {
+    margin-top: 150px; }
+    @media (max-width: 767.98px) {
+      .-about .-about-right {
+        margin-top: 0; } }
   .-about h2, .-about h3, .-about h4, .-about h5 {
     position: relative;
     float: left;

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+		<meta name="googlebot" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>looq</title>
+		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+
+
+	<div class="jumbotron container-fluid">
+		<div class="container">
+			<!-- <div class="row"> -->
+				<img src="./img/looq.svg" class="-logo">
+			<!-- </div> -->
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col col-12" style="padding-left:30px; padding-top:100px;">
+					<h1>Thank you</h1>
+					<h2>We will be in touch...</h2>
+					<a href="/" class="btn btn-lg btn-outline-dark">Back</a>
+				</div>
+			</div>
+		</div>
+  </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+		<script>
+			AOS.init();
+			$(document).ready(function() { 
+			  $('#myCarousel-jumbotron').carousel({
+				  interval: 5000,
+				  pause: "false"
+				})
+
+		    $( "a.cta" ).click(function( event ) {
+	        event.preventDefault();
+	        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 1000);
+		    });
+			});
+		</script>
+
+  </body>
+</html>

@@ -28,17 +28,18 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 50px;
     color: gray; }
 
+.-logo {
+  position: relative;
+  z-index: 5;
+  margin: 50px 0 0 0;
+  height: 80px; }
+
 .jumbotron {
   position: relative;
   min-height: 100vh;
   padding: 0;
   margin-bottom: 0;
   border-radius: 0; }
-  .jumbotron .-logo {
-    position: relative;
-    z-index: 5;
-    margin: 50px 0 0 0;
-    height: 80px; }
   .jumbotron #myCarousel-jumbotron {
     position: absolute;
     top: 0;
